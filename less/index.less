@@ -1,0 +1,178 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+// Variables 
+@mainfont: 'Staatliches', cursive;
+@border: 1px solid lightgrey;
+// Mix-ins
+.parafont(){
+	font-size: .9rem;
+	font-family: 'Raleway', sans-serif;
+	}
+.headerfont(){
+	font-size: 1.6rem;
+	font-family: 'Staatliches', cursive;
+		}	
+.section(){
+	padding: 2%;
+	width: 33%;
+}
+
+// LESS code starts here
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	flex-flow: column;
+	position: fixed;
+	margin-left: 1%;
+	a {
+		text-decoration: none;
+		padding-top: 100%;
+		font-family: @mainfont;
+		font-size: 0.9rem;
+		color: black;
+	}
+	a:hover {
+		color: lightpink;
+	}
+}
+
+.maincontent {
+	background: lightblue;
+	display: flex;
+	padding: 5% 0 5% 5%;
+	margin: 0 7% 0 7%;
+	width: 94%;
+.contentimage {
+	padding: 2%;
+	p{
+		width: 60%;
+		line-height: 1.5rem;
+	}
+}
+	h1 {
+	font-size: 2rem;
+	font-family: @mainfont;	
+	}
+	h2 {
+	font-size: 1rem;
+	border-bottom: @border;
+	padding: 2% 0;
+	.parafont();
+	}
+	h3 {
+	font-family: @mainfont;
+	}
+	
+	img {
+		width: 30%;
+		height: 30%;
+
+	}
+	p {
+		padding: 1% 0;
+		.parafont();
+		
+	}
+}
+.mainsection {
+	padding: 3%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	font-family: @mainfont;
+
+.skills{
+	.section();
+	padding-left: 10%;
+	ul {
+		display: flex;
+	}
+	li {
+		padding-left: 10%;
+		text-align: center;
+	}
+
+	}
+	.work{
+		.section();
+	}
+h2 {
+	.headerfont();
+	}
+
+p {
+	padding: 1% 0;
+	.parafont();
+	}
+	.contact {
+		.section();
+		address {
+			.parafont();
+		}
+		p {
+			.parafont();
+		}
+		i {
+			padding: 2%;
+		}
+	}
+	
+}
